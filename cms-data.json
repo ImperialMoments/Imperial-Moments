@@ -20,49 +20,81 @@
       "title": "Royal Wedding Planning",
       "icon": "fa-solid fa-gem",
       "text": "Bespoke wedding curations with regal grand setups, designer styling, and seamless coordinate flows.",
-      "features": ["Venue sourcing (Castles & Ballrooms)", "Bespoke bridal registry access", "Full design & styling management"]
+      "features": [
+        "Venue sourcing (Castles & Ballrooms)",
+        "Bespoke bridal registry access",
+        "Full design & styling management"
+      ]
     },
     {
       "title": "Destination Weddings",
       "icon": "fa-solid fa-plane-departure",
       "text": "Exquisite coordination of overseas weddings in French Châteaux, Italian villas, or private islands.",
-      "features": ["Global travel & concierge services", "Bilingual on-ground management", "Multi-day celebratory itineraries"]
+      "features": [
+        "Global travel & concierge services",
+        "Bilingual on-ground management",
+        "Multi-day celebratory itineraries"
+      ]
     },
     {
       "title": "Corporate Events",
       "icon": "fa-solid fa-handshake",
       "text": "Prestigious galas, elite awards nights, executive conferences, and grand brand launching ceremonies.",
-      "features": ["Brand experience alignment", "State-of-the-art production tech", "High-profile VIP speaker liaison"]
+      "features": [
+        "Brand experience alignment",
+        "State-of-the-art production tech",
+        "High-profile VIP speaker liaison"
+      ]
     },
     {
       "title": "Luxury Birthdays",
       "icon": "fa-solid fa-cake-candles",
       "text": "Milestone birthday affairs custom-tailored around ultra-luxurious, creative theatrical themes.",
-      "features": ["Custom stage design & performance", "Michellin-star menu design", "Immersive themed aesthetics"]
+      "features": [
+        "Custom stage design & performance",
+        "Michellin-star menu design",
+        "Immersive themed aesthetics"
+      ]
     },
     {
       "title": "Engagement Ceremonies",
       "icon": "fa-solid fa-ring",
       "text": "Intimate yet grand gatherings to announce forever, set in highly dramatic and romantic spaces.",
-      "features": ["Romantic styling & design", "Custom proposal orchestrations", "Fine wine & gourmet pairing"]
+      "features": [
+        "Romantic styling & design",
+        "Custom proposal orchestrations",
+        "Fine wine & gourmet pairing"
+      ]
     },
     {
       "title": "VIP Private Events",
       "icon": "fa-solid fa-champagne-glasses",
       "text": "Highly exclusive events where absolute discretion and custom luxury are non-negotiable details.",
-      "features": ["NDA protected environments", "Private security details", "High-profile artist management"]
+      "features": [
+        "NDA protected environments",
+        "Private security details",
+        "High-profile artist management"
+      ]
     },
     {
       "title": "Event Décor & Styling",
       "icon": "fa-solid fa-wand-magic-sparkles",
       "text": "Bespoke lighting, floral installations, luxury drapery, table curation, and floral arches.",
-      "features": ["High-end floral design registry", "Custom atmospheric lighting", "Luxury rentals (Cutlery & Chairs)"]
+      "features": [
+        "High-end floral design registry",
+        "Custom atmospheric lighting",
+        "Luxury rentals (Cutlery & Chairs)"
+      ]
     },
     {
       "title": "Entertainment & Artists",
       "icon": "fa-solid fa-masks-theater",
       "text": "Curating elite violinists, opera stars, international DJs, and acrobats for magnificent displays.",
-      "features": ["Global contract & rider handling", "Custom musical compositions", "Sound engineering oversight"]
+      "features": [
+        "Global contract & rider handling",
+        "Custom musical compositions",
+        "Sound engineering oversight"
+      ]
     }
   ],
   "portfolio": [
@@ -121,11 +153,35 @@
     }
   ],
   "gallery": [
-    { "src": "assets/wedding.png", "title": "Luxury Arch Details", "desc": "Golden floral arch at sunset ceremony." },
-    { "src": "assets/about_1.png", "title": "Tablescape Detail", "desc": "Luxury gold plate setting with crimson velvet napkins." },
-    { "src": "assets/corporate.png", "title": "Stage Lighting Curation", "desc": "Exquisite stage lighting for award events." },
-    { "src": "assets/vip_party.png", "title": "Champagne Tower", "desc": "Exquisite lounge birthday arrangements." },
-    { "src": "assets/about_2.png", "title": "Floral Curation", "desc": "Design coordinators positioning orchid displays." },
-    { "src": "assets/hero_bg.png", "title": "Chandelier Grandeur", "desc": "Massive crystals and candlelight setup." }
+    {
+      "src": "assets/wedding.png",
+      "title": "Luxury Arch Details",
+      "desc": "Golden floral arch at sunset ceremony."
+    },
+    {
+      "src": "assets/about_1.png",
+      "title": "Tablescape Detail",
+      "desc": "Luxury gold plate setting with crimson velvet napkins."
+    },
+    {
+      "src": "assets/corporate.png",
+      "title": "Stage Lighting Curation",
+      "desc": "Exquisite stage lighting for award events."
+    },
+    {
+      "src": "assets/vip_party.png",
+      "title": "Champagne Tower",
+      "desc": "Exquisite lounge birthday arrangements."
+    },
+    {
+      "src": "assets/about_2.png",
+      "title": "Floral Curation",
+      "desc": "Design coordinators positioning orchid displays."
+    },
+    {
+      "src": "assets/hero_bg.png",
+      "title": "Chandelier Grandeur",
+      "desc": "Massive crystals and candlelight setup."
+    }
   ]
 }
