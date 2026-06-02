@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperial Moments | Premium Luxury Event Management</title>
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description" content="Imperial Moments is an elite, ultra-luxury event management company. We craft extraordinary weddings, corporate galas, and VIP celebrations with royal elegance and impeccable styling.">
+    <meta name="keywords" content="luxury wedding planner, high-end event management, royal weddings, VIP private events, luxury corporate events, premium party planning">
+    <meta name="author" content="Imperial Moments">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="assets/brand_logo.jpg" alt="Imperial Moments Logo" class="preloader-brand-logo">
+            <div class="preloader-bar-container">
+                <div class="preloader-bar"></div>
+            </div>
+            <p class="preloader-text">Imperial Moments</p>
+        </div>
+    </div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="luxury-header" id="header">
+        <div class="container nav-container">
+            <!-- Logo: Golden crown integrated with the letter "I" -->
+            <a href="#home" class="logo" id="logo-link" aria-label="Imperial Moments Home">
+                <img src="assets/brand_logo.jpg" alt="Imperial Moments Logo" class="brand-logo-img">
+                <div class="logo-text">
+                    <span class="brand-title">IMPERIAL</span>
+                    <span class="brand-subtitle">MOMENTS</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About Us</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- CTA & Mobile Toggle -->
+            <div class="nav-right">
+                <button id="open-registry-btn" class="social-icon-btn" aria-label="Registry Login" style="width: 38px; height: 38px; border-color: rgba(212,175,55,0.4); margin-right: 10px;"><i class="fa-solid fa-key" style="font-size: 0.8rem;"></i></button>
+                <a href="#contact" class="btn btn-nav btn-gold-outline">
+                    <span>Book Consultation</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu" aria-expanded="false">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#portfolio" class="mobile-nav-link">Portfolio</a></li>
+                <li><a href="#testimonials" class="mobile-nav-link">Testimonials</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-footer">
+                <div class="divider-gold"></div>
+                <a href="tel:+917205767376" class="mobile-footer-link"><i class="fa-solid fa-phone"></i> +91 72057 67376</a>
+                <a href="tel:+919337513044" class="mobile-footer-link"><i class="fa-solid fa-phone"></i> +91 93375 13044</a>
+                <a href="mailto:Imperialmoments2026@gmail.com" class="mobile-footer-link"><i class="fa-solid fa-envelope"></i> Imperialmoments2026@gmail.com</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <!-- Background Image with parallax overlay -->
+            <div class="hero-bg" style="background-image: linear-gradient(rgba(17, 17, 17, 0.65), rgba(17, 17, 17, 0.85)), url('assets/brand_logo.jpg');"></div>
+            
+            <!-- Canvas overlay for floating golden particles -->
+            <canvas id="particles-canvas" class="hero-particles"></canvas>
+            
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-label-top" id="hero-label-animate">A WORLD OF ELITE CELEBRATIONS</span>
+                    <h1 class="hero-title" id="hero-title-animate">Imperial Moments</h1>
+                    <div class="ornament-divider" id="hero-divider-animate">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                    <p class="hero-tagline" id="hero-tagline-animate">Crafting Extraordinary Celebrations with Royal Elegance</p>
+                    <div class="hero-actions" id="hero-actions-animate">
+                        <a href="#contact" class="btn btn-gold btn-shine">
+                            <span>Book a Consultation</span>
+                        </a>
+                        <a href="#portfolio" class="btn btn-white-outline">
+                            <span>View Our Portfolio</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="scroll-indicator">
+                <a href="#about" class="scroll-mouse" aria-label="Scroll Down">
+                    <span class="wheel"></span>
+                </a>
+                <span class="scroll-text">Scroll To Explore</span>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="about-section section-padding">
+            <div class="container">
+                <div class="grid grid-2-col align-center gap-xl">
+                    
+                    <!-- Left: Story & Copy -->
+                    <div class="about-text-block anim-fade-in-left">
+                        <span class="section-subtitle" id="about-subtitle">THE LEGACY</span>
+                        <h2 class="section-title" id="about-title">The Art of Royal Celebration</h2>
+                        <div class="ornament-divider-left">
+                            <i class="fa-solid fa-crown gold-text small-crown"></i>
+                            <span class="ornament-line-left"></span>
+                        </div>
+                        <p class="about-paragraph highlight" id="about-highlight">
+                            At Imperial Moments, we believe that life's grandest milestones deserve to be staged with royal majesty, absolute precision, and timeless luxury.
+                        </p>
+                        <div id="about-paragraphs">
+                            <p class="about-paragraph">
+                                Born out of a passion for luxury hospitality and grand ballrooms, Imperial Moments is the premier event planning concierge for high-end weddings, prestigious corporate galas, and exclusive VIP private experiences. We curate bespoke events worldwide, transforming visions into breathtaking realities.
+                            </p>
+                            <p class="about-paragraph">
+                                Every centerpiece, every candlelight shimmer, and every performance is hand-curated. With an elite registry of vendors, global destination access, and dedicated styling consultants, we guarantee an affair that is prestigious, unforgettable, and entirely yours.
+                            </p>
+                        </div>
+                        <div class="signature-block">
+                            <div class="signature-img">
+                                <span class="founder-sig">Victoria Sterling</span>
+                            </div>
+                            <div class="founder-info">
+                                <span class="founder-name">Victoria Sterling</span>
+                                <span class="founder-title">Founder & Creative Director</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Elegant overlapping layouts with gold-framed photos -->
+                    <div class="about-image-block anim-fade-in-right">
+                        <div class="image-collage-container">
+                            <div class="collage-bg-ornament"></div>
+                            <!-- Frame 1 (Main/Bottom) -->
+                            <div class="collage-frame frame-main">
+                                <div class="gold-inner-border">
+                                    <img src="assets/about_2.png" alt="Luxury Event Design Setup" class="collage-img">
+                                </div>
+                            </div>
+                            <!-- Frame 2 (Smaller/Top) -->
+                            <div class="collage-frame frame-overlap">
+                                <div class="gold-inner-border">
+                                    <img src="assets/about_1.png" alt="Fine Luxury Table Details" class="collage-img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services" class="services-section section-padding bg-charcoal-darken">
+            <div class="container">
+                <div class="text-center section-header anim-fade-in-up">
+                    <span class="section-subtitle">OUR CAPABILITIES</span>
+                    <h2 class="section-title">Bespoke Services</h2>
+                    <div class="ornament-divider-center">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                    <p class="section-description text-center">
+                        Whether celebrating in a historic castle or hosting an ultra-exclusive private soirée, we bring royal elegance to every arrangement.
+                    </p>
+                </div>
+
+                <div class="grid grid-4-col gap-lg service-grid">
+                    
+                    <!-- Card 1: Royal Wedding Planning -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="service-card-title">Royal Wedding Planning</h3>
+                        <p class="service-card-text">Bespoke wedding curations with regal grand setups, designer styling, and seamless coordinate flows.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Venue sourcing (Castles & Ballrooms)</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Bespoke bridal registry access</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Full design & styling management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 2: Destination Weddings -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-plane-departure"></i>
+                        </div>
+                        <h3 class="service-card-title">Destination Weddings</h3>
+                        <p class="service-card-text">Exquisite coordination of overseas weddings in French Châteaux, Italian villas, or private islands.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Global travel & concierge services</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Bilingual on-ground management</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Multi-day celebratory itineraries</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 3: Corporate Events -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3 class="service-card-title">Corporate Events</h3>
+                        <p class="service-card-text">Prestigious galas, elite awards nights, executive conferences, and grand brand launching ceremonies.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Brand experience alignment</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> State-of-the-art production tech</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> High-profile VIP speaker liaison</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 4: Luxury Birthday Celebrations -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-cake-candles"></i>
+                        </div>
+                        <h3 class="service-card-title">Luxury Birthdays</h3>
+                        <p class="service-card-text">Milestone birthday affairs custom-tailored around ultra-luxurious, creative theatrical themes.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Custom stage design & performance</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Michellin-star menu design</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Immersive themed aesthetics</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 5: Engagement Ceremonies -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-ring"></i>
+                        </div>
+                        <h3 class="service-card-title">Engagement Ceremonies</h3>
+                        <p class="service-card-text">Intimate yet grand gatherings to announce forever, set in highly dramatic and romantic spaces.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Romantic styling & design</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Custom proposal orchestrations</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Fine wine & gourmet pairing</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 6: VIP Private Events -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-champagne-glasses"></i>
+                        </div>
+                        <h3 class="service-card-title">VIP Private Events</h3>
+                        <p class="service-card-text">Highly exclusive events where absolute discretion and custom luxury are non-negotiable details.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> NDA protected environments</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Private security details</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> High-profile artist management</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 7: Event Décor & Styling -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <h3 class="service-card-title">Event Décor & Styling</h3>
+                        <p class="service-card-text">Bespoke lighting, floral installations, luxury drapery, table curation, and floral arches.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> High-end floral design registry</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Custom atmospheric lighting</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Luxury rentals (Cutlery & Chairs)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Card 8: Entertainment Management -->
+                    <div class="service-card anim-reveal-item">
+                        <div class="service-card-border"></div>
+                        <div class="service-card-icon">
+                            <i class="fa-solid fa-masks-theater"></i>
+                        </div>
+                        <h3 class="service-card-title">Entertainment & Artists</h3>
+                        <p class="service-card-text">Curating elite violinists, opera stars, international DJs, and acrobats for magnificent displays.</p>
+                        <ul class="service-card-features">
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Global contract & rider handling</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Custom musical compositions</li>
+                            <li><i class="fa-solid fa-chevron-right gold-text"></i> Sound engineering oversight</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTICS SECTION -->
+        <section class="stats-section section-padding" style="background-image: linear-gradient(rgba(107, 15, 26, 0.93), rgba(74, 7, 16, 0.95)), url('assets/brand_logo.jpg');">
+            <div class="container">
+                <div class="grid grid-4-col text-center stats-grid">
+                    
+                    <div class="stat-item anim-fade-in">
+                        <i class="fa-solid fa-calendar-check stat-icon"></i>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="500">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <p class="stat-label">Events Managed</p>
+                    </div>
+
+                    <div class="stat-item anim-fade-in">
+                        <i class="fa-solid fa-heart stat-icon"></i>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="200">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <p class="stat-label">Luxury Weddings</p>
+                    </div>
+
+                    <div class="stat-item anim-fade-in">
+                        <i class="fa-solid fa-building-flag stat-icon"></i>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="50">0</span><span class="stat-plus">+</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <p class="stat-label">Corporate Clients</p>
+                    </div>
+
+                    <div class="stat-item anim-fade-in">
+                        <i class="fa-solid fa-award stat-icon"></i>
+                        <div class="stat-number-wrapper">
+                            <span class="stat-number" data-target="98">0</span><span class="stat-plus">%</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <p class="stat-label">Client Satisfaction</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO SECTION -->
+        <section id="portfolio" class="portfolio-section section-padding">
+            <div class="container">
+                
+                <div class="text-center section-header anim-fade-in-up">
+                    <span class="section-subtitle">THE MASTERPIECES</span>
+                    <h2 class="section-title">Our Portfolio</h2>
+                    <div class="ornament-divider-center">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                    <p class="section-description text-center">
+                        Explore our select gallery of prestigious celebrations, custom styling designs, and lavish settings.
+                    </p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="portfolio-filters anim-fade-in-up">
+                    <button class="filter-btn active" data-filter="all">All Masterpieces</button>
+                    <button class="filter-btn" data-filter="weddings">Royal Weddings</button>
+                    <button class="filter-btn" data-filter="corporate">Corporate Galas</button>
+                    <button class="filter-btn" data-filter="vip">VIP Lounges</button>
+                    <button class="filter-btn" data-filter="decor">Custom Décor</button>
+                </div>
+
+                <!-- Masonry Gallery -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    
+                    <!-- Item 1: Royal Wedding -->
+                    <div class="portfolio-item weddings all" data-category="weddings">
+                        <div class="portfolio-card">
+                            <img src="assets/wedding.png" alt="Royal Wedding Ceremony" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">Royal Wedding</span>
+                                    <h4 class="portfolio-item-title">The Versailles Romance</h4>
+                                    <p class="portfolio-item-details">Castle Ballroom, France</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Corporate Gala -->
+                    <div class="portfolio-item corporate all" data-category="corporate">
+                        <div class="portfolio-card">
+                            <img src="assets/corporate.png" alt="Corporate Awards Gala" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">Corporate Gala</span>
+                                    <h4 class="portfolio-item-title">Aegis Annual Summit</h4>
+                                    <p class="portfolio-item-details">Plaza Ballroom, NY</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: VIP Private -->
+                    <div class="portfolio-item vip all" data-category="vip">
+                        <div class="portfolio-card">
+                            <img src="assets/vip_party.png" alt="VIP Private Lounge Birthday" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">VIP Soirée</span>
+                                    <h4 class="portfolio-item-title">The Sapphire Lounge</h4>
+                                    <p class="portfolio-item-details">Private Island Estate</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Decor Details -->
+                    <div class="portfolio-item decor weddings all" data-category="decor">
+                        <div class="portfolio-card">
+                            <img src="assets/about_1.png" alt="Ornate Gold and Rose Table" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">Custom Styling</span>
+                                    <h4 class="portfolio-item-title">Crest & Crimson Tablescape</h4>
+                                    <p class="portfolio-item-details">Ritz Carlton, Vienna</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 5: Decor Floral -->
+                    <div class="portfolio-item decor all" data-category="decor">
+                        <div class="portfolio-card">
+                            <img src="assets/about_2.png" alt="Orchids on Gold Stand Design" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">Floral Installation</span>
+                                    <h4 class="portfolio-item-title">Orchid Cascade Stand</h4>
+                                    <p class="portfolio-item-details">Aria Ballrooms, Milan</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 6: Ballroom setup -->
+                    <div class="portfolio-item weddings vip all" data-category="weddings">
+                        <div class="portfolio-card">
+                            <img src="assets/hero_bg.png" alt="Royal Ballroom Setup" class="portfolio-img">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="portfolio-category">Palace Wedding</span>
+                                    <h4 class="portfolio-item-title">The Chandelier Grand Ballroom</h4>
+                                    <p class="portfolio-item-details">Hofburg Palace, Austria</p>
+                                    <button class="portfolio-view-btn" aria-label="View Project"><i class="fa-solid fa-expand"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TESTIMONIAL CAROUSEL SECTION -->
+        <section id="testimonials" class="testimonials-section section-padding bg-charcoal-darken">
+            <div class="container">
+                <div class="text-center section-header anim-fade-in-up">
+                    <span class="section-subtitle">THE INFLUENCE</span>
+                    <h2 class="section-title">Patron Reviews</h2>
+                    <div class="ornament-divider-center">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                    <p class="section-description text-center">
+                        Words from our distinguished patrons who entrusted their most treasured milestones to our design team.
+                    </p>
+                </div>
+
+                <!-- Testimonial Slider Wrapper -->
+                <div class="testimonials-slider-container anim-fade-in-up">
+                    
+                    <!-- Left Arrow -->
+                    <button class="slider-arrow arrow-left" id="prev-testimonial" aria-label="Previous Review">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    
+                    <!-- Slider Viewport -->
+                    <div class="testimonials-viewport">
+                        <div class="testimonials-track" id="testimonials-track">
+                            
+                            <!-- Slide 1 -->
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <i class="fa-solid fa-quote-left quote-icon-gold"></i>
+                                    <p class="testimonial-text">
+                                        "Imperial Moments orchestrated our destination wedding in Normandy. It was nothing short of a fairy tale. The gold styling, the chandelier layout, and their concierge's support for our guests was simply immaculate. Pure royal class!"
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <h5 class="author-name">Lady Eleanor &amp; Lord George</h5>
+                                        <p class="author-title">Normandy Chateau Wedding</p>
+                                    </div>
+                                    <div class="author-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <i class="fa-solid fa-quote-left quote-icon-gold"></i>
+                                    <p class="testimonial-text">
+                                        "The annual corporate anniversary awards dinner we hosted needed to breathe prestige. Victoria Sterling and her event squad styled the hall in high-end charcoal and metallic gold drapes. The sound system and security were flawlessly coordinated. A spectacular success."
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <h5 class="author-name">Jonathan Hayes</h5>
+                                        <p class="author-title">CEO, Vanguard Global Capital</p>
+                                    </div>
+                                    <div class="author-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="testimonial-slide">
+                                <div class="testimonial-card">
+                                    <i class="fa-solid fa-quote-left quote-icon-gold"></i>
+                                    <p class="testimonial-text">
+                                        "For my wife's 50th birthday gala, Imperial Moments designed a private island garden masquerade. The sheer attention to detailed floral installations and the violinists they brought from Salzburg left our guests spellbound. Truly master designers."
+                                    </p>
+                                    <div class="testimonial-author">
+                                        <h5 class="author-name">Maximilian Vane</h5>
+                                        <p class="author-title">Private Island Estate Gala</p>
+                                    </div>
+                                    <div class="author-stars">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button class="slider-arrow arrow-right" id="next-testimonial" aria-label="Next Review">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Navigation Dots -->
+                <div class="slider-dots" id="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION (FULL-WIDTH GRID WITH LIGHTBOX) -->
+        <section id="gallery" class="gallery-section section-padding-top bg-charcoal">
+            <div class="container-fluid no-padding">
+                <div class="text-center section-header anim-fade-in-up">
+                    <span class="section-subtitle">THE GLAMOUR</span>
+                    <h2 class="section-title">Visual Splendor</h2>
+                    <div class="ornament-divider-center">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                </div>
+
+                <!-- Slider-style Grid of Luxury Event Details -->
+                <div class="gallery-marquee-container">
+                    <div class="gallery-track">
+                        <!-- Image 1 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/wedding.png" data-title="Luxury Arch Details" data-desc="Golden floral arch at sunset ceremony.">
+                                <img src="assets/wedding.png" alt="Luxury Arch Details" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <!-- Image 2 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/about_1.png" data-title="Tablescape Detail" data-desc="Luxury gold plate setting with crimson velvet napkins.">
+                                <img src="assets/about_1.png" alt="Tablescape Detail" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <!-- Image 3 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/corporate.png" data-title="Stage Lighting Curation" data-desc="Exquisite stage lighting for award events.">
+                                <img src="assets/corporate.png" alt="Stage Lighting Curation" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <!-- Image 4 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/vip_party.png" data-title="Champagne Tower" data-desc="Exquisite lounge birthday arrangements.">
+                                <img src="assets/vip_party.png" alt="Champagne Tower" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <!-- Image 5 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/about_2.png" data-title="Floral Curation" data-desc="Design coordinators positioning orchid displays.">
+                                <img src="assets/about_2.png" alt="Floral Curation" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                        <!-- Image 6 -->
+                        <div class="gallery-item-wrapper">
+                            <div class="gallery-item-inner" data-src="assets/hero_bg.png" data-title="Chandelier Grandeur" data-desc="Massive crystals and candlelight setup.">
+                                <img src="assets/hero_bg.png" alt="Chandelier Grandeur" class="gallery-thumb">
+                                <div class="gallery-item-glow"></div>
+                                <span class="gallery-icon-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LIGHTBOX MODAL OVERLAY -->
+        <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-hidden="true">
+            <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+            <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+            
+            <div class="lightbox-content">
+                <img src="" alt="Enlarged Luxury Event Image" class="lightbox-img" id="lightbox-img">
+                <div class="lightbox-caption">
+                    <h5 class="lightbox-title" id="lightbox-title"></h5>
+                    <p class="lightbox-desc" id="lightbox-desc"></p>
+                </div>
+            </div>
+            
+            <button class="lightbox-next" id="lightbox-next" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section section-padding">
+            <div class="container">
+                <div class="text-center section-header anim-fade-in-up">
+                    <span class="section-subtitle">THE INQUIRY</span>
+                    <h2 class="section-title">Begin Your Story</h2>
+                    <div class="ornament-divider-center">
+                        <span class="ornament-line"></span>
+                        <i class="fa-solid fa-crown gold-text"></i>
+                        <span class="ornament-line"></span>
+                    </div>
+                    <p class="section-description text-center">
+                        Enter details of your envisioned milestone celebration. Our creative staff will connect to craft your custom experience.
+                    </p>
+                </div>
+
+                <div class="grid grid-2-col gap-xl">
+                    
+                    <!-- Left: Details & Interactive Map -->
+                    <div class="contact-info-block anim-fade-in-left">
+                        <div class="luxury-info-card">
+                            <h3 class="info-card-heading">Imperial Office</h3>
+                            <div class="info-divider"></div>
+                            
+                            <ul class="info-list">
+                                <li>
+                                    <i class="fa-solid fa-location-dot info-icon"></i>
+                                    <div class="info-item-text">
+                                        <span class="info-label">Address</span>
+                                        <span class="info-value" id="val-address">750 Fifth Avenue, Suite 1200, New York, NY 10019</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-phone info-icon"></i>
+                                    <div class="info-item-text">
+                                        <span class="info-label">Concierge Lines</span>
+                                        <span class="info-value" id="val-phones"><a href="tel:+917205767376">+91 72057 67376</a> &nbsp;|&nbsp; <a href="tel:+919337513044">+91 93375 13044</a></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class="fa-solid fa-envelope info-icon"></i>
+                                    <div class="info-item-text">
+                                        <span class="info-label">Inquiries</span>
+                                        <span class="info-value" id="val-email">Imperialmoments2026@gmail.com</span>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="social-channels">
+                                <span class="social-title">CONNECT</span>
+                                <div class="social-icons">
+                                    <a href="https://wa.me/917205767376" target="_blank" rel="noopener" class="social-icon-btn whatsapp" aria-label="WhatsApp Chat"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a href="https://instagram.com/Imperial.moments_" target="_blank" rel="noopener" class="social-icon-btn instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                    <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-icon-btn pinterest" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Right: Contact Form -->
+                    <div class="contact-form-block anim-fade-in-right">
+                        <div class="luxury-form-card">
+                            <h3 class="info-card-heading">Event Consultation Request</h3>
+                            <div class="info-divider"></div>
+                            
+                            <form id="consultation-form" novalidate>
+                                <div class="form-grid">
+                                    
+                                    <!-- Name -->
+                                    <div class="form-group full-width">
+                                        <label for="form-name" class="form-label">Full Name</label>
+                                        <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Lord Sterling Carter" required>
+                                        <span class="error-msg" id="error-name">Please enter your name.</span>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="form-group">
+                                        <label for="form-email" class="form-label">Email Address</label>
+                                        <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. sterling@luxury.com" required>
+                                        <span class="error-msg" id="error-email">Please enter a valid email.</span>
+                                    </div>
+
+                                    <!-- Phone -->
+                                    <div class="form-group">
+                                        <label for="form-phone" class="form-label">Contact Phone</label>
+                                        <input type="tel" id="form-phone" name="phone" class="form-input" placeholder="e.g. +1 (555) 019-2834" required>
+                                        <span class="error-msg" id="error-phone">Please enter your phone number.</span>
+                                    </div>
+
+                                    <!-- Event Type -->
+                                    <div class="form-group">
+                                        <label for="form-event-type" class="form-label">Celebration Class</label>
+                                        <select id="form-event-type" name="event_type" class="form-input form-select" required>
+                                            <option value="" disabled selected>Select Event Type</option>
+                                            <option value="wedding">Royal Wedding Planning</option>
+                                            <option value="destination">Destination Wedding</option>
+                                            <option value="corporate">Corporate Gala Event</option>
+                                            <option value="birthday">Luxury Birthday Soirée</option>
+                                            <option value="engagement">Engagement Ceremony</option>
+                                            <option value="vip">VIP Private Gathering</option>
+                                            <option value="styling">Decor & Styling Commission</option>
+                                            <option value="other">Other Exclusive Event</option>
+                                        </select>
+                                        <span class="error-msg" id="error-event-type">Please select an event class.</span>
+                                    </div>
+
+                                    <!-- Event Date -->
+                                    <div class="form-group">
+                                        <label for="form-date" class="form-label">Target Celebration Date</label>
+                                        <input type="date" id="form-date" name="event_date" class="form-input form-date" required>
+                                        <span class="error-msg" id="error-date">Please select a target date.</span>
+                                    </div>
+
+                                    <!-- Message -->
+                                    <div class="form-group full-width">
+                                        <label for="form-message" class="form-label">Your Vision & Aspirations</label>
+                                        <textarea id="form-message" name="message" rows="5" class="form-input form-textarea" placeholder="Detail your expectations, venue preferences, and guest scale..." required></textarea>
+                                        <span class="error-msg" id="error-message">Please share a brief description of your vision.</span>
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <div class="form-group full-width text-right">
+                                        <button type="submit" class="btn btn-gold btn-full btn-shine" id="form-submit-btn">
+                                            <span>Submit Royal Inquiry</span>
+                                        </button>
+                                        <div id="form-error-msg" class="error-msg text-center" style="display: none; margin-top: 15px; color: var(--velvet-red-light); font-size: 0.85rem;"></div>
+                                    </div>
+
+                                </div>
+                            </form>
+
+                            <!-- Success Modal inside Card -->
+                            <div class="form-success-overlay" id="form-success-overlay">
+                                <div class="success-content text-center">
+                                    <i class="fa-solid fa-crown success-crown-icon"></i>
+                                    <h4 class="success-heading">Inquiry Received</h4>
+                                    <p class="success-message">
+                                        Thank you for reaching out to **Imperial Moments**. Your inquiry has been sent to our Elite Concierge Registry. A bespoke representative will contact you within 24 hours.
+                                    </p>
+                                    <button class="btn btn-gold-outline" id="close-success-btn"><span>Close</span></button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="luxury-footer" style="background-image: linear-gradient(rgba(107, 15, 26, 0.95), rgba(74, 7, 16, 0.98)), url('assets/brand_logo.jpg');">
+        <div class="footer-top-accent"></div>
+        <div class="container section-padding-top">
+            
+            <div class="grid grid-4-col gap-xl footer-grid">
+                
+                <!-- Col 1: Brand & Bio -->
+                <div class="footer-col col-brand">
+                    <a href="#home" class="logo logo-footer">
+                        <img src="assets/brand_logo.jpg" alt="Imperial Moments Logo" class="brand-logo-img">
+                        <div class="logo-text">
+                            <span class="brand-title">IMPERIAL</span>
+                            <span class="brand-subtitle">MOMENTS</span>
+                        </div>
+                    </a>
+                    <p class="footer-bio">
+                        Crafting elite celebrations, royal wedding styling, and exclusive corporate galas since 2012. Transforming spaces into kingdoms of splendor.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://instagram.com/Imperial.moments_" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://pinterest.com" target="_blank" rel="noopener" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="https://wa.me/917205767376" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                        <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#portfolio"><i class="fa-solid fa-chevron-right"></i> Portfolio</a></li>
+                        <li><a href="#testimonials"><i class="fa-solid fa-chevron-right"></i> Testimonials</a></li>
+                        <li><a href="#gallery"><i class="fa-solid fa-chevron-right"></i> Gallery</a></li>
+                        <li><a href="#contact"><i class="fa-solid fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Services Short -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Experiences</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Royal Weddings</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Destination Weddings</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Corporate Galas</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> VIP Celebrations</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Luxury Décor Commission</a></li>
+                        <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Artist Entertainment</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Newsletter/Statement -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">The Royal Registry</h4>
+                    <p class="footer-newsletter-text">
+                        Subscribe to receive exclusive invites, showcase insights, and premium event styling trends.
+                    </p>
+                    <form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed to Registry.'); this.reset();">
+                        <input type="email" placeholder="Your Noble Email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-btn" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Copyright bar -->
+            <div class="footer-bottom text-center">
+                <p class="copyright-text">
+                    &copy; <span id="current-year">2026</span> Imperial Moments &ndash; Creating Royal Experiences. All Rights Reserved.
+                </p>
+                <div class="legal-links">
+                    <a href="#privacy">Privacy Registry</a> &bull; <a href="#terms">Terms of Splendor</a> &bull; <a href="#" id="footer-registry-btn">Registry Access</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         INTEGRATED ADMIN REGISTRY CMS & OVERLAYS
+         ========================================================================== -->
+
+    <!-- AUTHENTICATION CARD OVERLAY -->
+    <div class="auth-wrapper" id="auth-wrapper" style="display: none;">
+        <div class="auth-card">
+            <button class="lightbox-close" id="close-auth-btn" style="top: 15px; right: 20px; font-size: 2.2rem; cursor: pointer;">&times;</button>
+            <img src="assets/brand_logo.jpg" alt="Imperial Moments" class="auth-logo">
+            <h1 class="auth-heading gold-text" style="font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 5px;">IMPERIAL</h1>
+            <p class="auth-subheading" style="font-size: 0.7rem; letter-spacing: 0.2em; color: var(--gold); text-transform: uppercase; margin-bottom: 35px;">Elite CMS Registry Login</p>
+            
+            <div class="error-banner" id="login-error-banner" style="background: rgba(107, 15, 26, 0.2); border: 1px solid var(--velvet-red); color: var(--cream); padding: 12px; font-size: 0.78rem; margin-bottom: 25px; display: none;">
+                Invalid credentials. Access Denied.
+            </div>
+
+            <form id="login-form">
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="login-username" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 8px; font-weight: 500;">Registry Username</label>
+                    <input type="text" id="login-username" class="form-input" placeholder="e.g. imperialmoments2026" required autocomplete="username" style="width: 100%;">
+                </div>
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="login-password" style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 8px; font-weight: 500;">Secret Password</label>
+                    <input type="password" id="login-password" class="form-input" placeholder="••••••••" required autocomplete="current-password" style="width: 100%;">
+                </div>
+                
+                <button type="submit" class="btn btn-gold btn-full" style="margin-top: 15px; width: 100%;">
+                    <span>Authenticate Access</span>
+                </button>
+
+                <div class="form-links" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; margin-top: 15px;">
+                    <span></span>
+                    <span class="forgot-link" id="trigger-forgot-btn" style="color: var(--gold); text-decoration: underline; cursor: pointer;">Forgot Password?</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- FORGOT PASSWORD MODALS -->
+    <!-- Modal 1: Request Email -->
+    <div class="modal" id="modal-forgot-email">
+        <div class="modal-content">
+            <h3 class="modal-title">Password Recovery</h3>
+            <p class="modal-text">To verify identity registry, please enter the official account email address associated with your brand.</p>
+            
+            <div class="error-banner" id="forgot-email-error" style="background: rgba(107, 15, 26, 0.2); border: 1px solid var(--velvet-red); color: var(--cream); padding: 12px; font-size: 0.78rem; margin-bottom: 25px; display: none;">
+                Email address does not match registered owner profile.
+            </div>
+
+            <form id="forgot-email-form">
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="forgot-email-input">Official Registry Email</label>
+                    <input type="email" id="forgot-email-input" class="form-input" placeholder="e.g. concierge@gmail.com" required style="width: 100%;">
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Generate OTP</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 2: Verify OTP -->
+    <div class="modal" id="modal-forgot-otp">
+        <div class="modal-content">
+            <h3 class="modal-title">Identity Verification</h3>
+            <p class="modal-text">A simulated verification passcode has been dispatched to your email. Please enter it below.</p>
+            
+            <div class="otp-hint" id="otp-testing-box" style="font-size: 0.78rem; background: rgba(212,175,55,0.08); border: 1px dashed var(--gold); padding: 12px; color: var(--gold-light); margin: 20px 0; font-family: monospace; border-radius: 4px;">
+                Testing Passcode Hint: <span id="testing-otp-value" style="font-weight: 700; color: #fff;">000000</span>
+            </div>
+
+            <div class="error-banner" id="forgot-otp-error" style="background: rgba(107, 15, 26, 0.2); border: 1px solid var(--velvet-red); color: var(--cream); padding: 12px; font-size: 0.78rem; margin-bottom: 25px; display: none;">
+                Passcode verification failed. Try again.
+            </div>
+
+            <form id="forgot-otp-form">
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="forgot-otp-input">6-Digit Passcode</label>
+                    <input type="text" id="forgot-otp-input" class="form-input text-center" maxlength="6" placeholder="0 0 0 0 0 0" required style="letter-spacing: 0.5em; font-size: 1.3rem; width: 100%;">
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Abort</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Verify Code</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal 3: Reset Password -->
+    <div class="modal" id="modal-forgot-reset">
+        <div class="modal-content">
+            <h3 class="modal-title">Registry Reset</h3>
+            <p class="modal-text">Passcode verified. Please enter and confirm your new registry password below.</p>
+            
+            <div class="error-banner" id="forgot-reset-error" style="background: rgba(107, 15, 26, 0.2); border: 1px solid var(--velvet-red); color: var(--cream); padding: 12px; font-size: 0.78rem; margin-bottom: 25px; display: none;">
+                Passwords do not match.
+            </div>
+
+            <form id="forgot-reset-form">
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="reset-pass-1">New Registry Password</label>
+                    <input type="password" id="reset-pass-1" class="form-input" placeholder="••••••••" required style="width: 100%;">
+                </div>
+                <div class="form-group" style="margin-bottom: 22px; text-align: left;">
+                    <label class="form-label" for="reset-pass-2">Confirm Registry Password</label>
+                    <input type="password" id="reset-pass-2" class="form-input" placeholder="••••••••" required style="width: 100%;">
+                </div>
+                <button type="submit" class="btn btn-gold btn-full" style="margin-top: 25px; width: 100%;">
+                    <span>Update Registry Credentials</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- INTEGRATED DASHBOARD FULL-SCREEN OVERLAY -->
+    <div class="dashboard-container" id="dashboard-container" style="display: none;">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/brand_logo.jpg" alt="Imperial Moments Logo" class="sidebar-logo">
+                <h2 class="sidebar-title gold-text">IMPERIAL</h2>
+                <p class="sidebar-subtitle">Moments Registry</p>
+            </div>
+            
+            <nav class="sidebar-menu">
+                <button class="menu-item active" data-target="panel-about"><i class="fa-solid fa-book-open"></i> About Us</button>
+                <button class="menu-item" data-target="panel-services"><i class="fa-solid fa-crown"></i> Services</button>
+                <button class="menu-item" data-target="panel-portfolio"><i class="fa-solid fa-images"></i> Portfolio</button>
+                <button class="menu-item" data-target="panel-testimonials"><i class="fa-solid fa-quote-left"></i> Testimonials</button>
+                <button class="menu-item" data-target="panel-gallery"><i class="fa-solid fa-camera-retro"></i> Gallery Marquee</button>
+                <button class="menu-item" data-target="panel-contact"><i class="fa-solid fa-envelope"></i> Contact Info</button>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <button class="btn btn-gold-outline btn-sm" id="close-dashboard-view-btn" style="width: 100%;"><i class="fa-solid fa-circle-xmark"></i> Close Dashboard</button>
+                <button class="btn btn-red-outline btn-sm" id="logout-btn" style="width: 100%;"><i class="fa-solid fa-right-from-bracket"></i> Lock Registry</button>
+            </div>
+        </aside>
+
+        <!-- Dynamic Content Editor Area -->
+        <main class="content-wrapper">
+            <header class="content-header">
+                <h1 class="content-title" id="panel-title-text">About Us Editor</h1>
+                <div class="header-actions">
+                    <span style="font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em;"><i class="fa-solid fa-user-shield"></i> Active Admin Registry</span>
+                    <button class="btn btn-gold btn-sm" id="global-save-btn"><i class="fa-solid fa-cloud-arrow-up"></i> Publish Changes</button>
+                </div>
+            </header>
+
+            <div class="panel-body">
+                
+                <!-- 1. ABOUT US PANEL -->
+                <div class="dashboard-panel active" id="panel-about">
+                    <p class="panel-desc">Modify the historical narrative, creative directorship titles, and about summaries shown in the homepage legacy frame.</p>
+                    <form class="cms-form-grid">
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-about-subtitle">Narrative Subtitle</label>
+                            <input type="text" id="edit-about-subtitle" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-about-title">Narrative Title</label>
+                            <input type="text" id="edit-about-title" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-about-highlight">Signature Highlight Quote</label>
+                            <textarea id="edit-about-highlight" class="form-input textarea-input" rows="3" required style="width: 100%;"></textarea>
+                        </div>
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-about-p1">History Column 1</label>
+                            <textarea id="edit-about-p1" class="form-input textarea-input" rows="4" required style="width: 100%;"></textarea>
+                        </div>
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-about-p2">History Column 2</label>
+                            <textarea id="edit-about-p2" class="form-input textarea-input" rows="4" required style="width: 100%;"></textarea>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 2. SERVICES PANEL -->
+                <div class="dashboard-panel" id="panel-services">
+                    <p class="panel-desc">Update the core capabilities grid cards. You can edit card icons, features, and descriptions, or add brand new custom service cards.</p>
+                    
+                    <div class="list-header">
+                        <h3>Configured Capabilities</h3>
+                        <button class="btn btn-gold btn-sm" id="btn-add-service"><i class="fa-solid fa-plus"></i> Add Service</button>
+                    </div>
+
+                    <div class="cms-items-grid" id="cms-services-list">
+                        <!-- Dynamic list items cards -->
+                    </div>
+                </div>
+
+                <!-- 3. PORTFOLIO PANEL -->
+                <div class="dashboard-panel" id="panel-portfolio">
+                    <p class="panel-desc">Manage the Masterpiece works grid. Assign categories to enable user filters, write venue descriptors, and provide image references.</p>
+                    
+                    <div class="list-header">
+                        <h3>Showcase Masterpieces</h3>
+                        <button class="btn btn-gold btn-sm" id="btn-add-portfolio"><i class="fa-solid fa-plus"></i> Add Portfolio Item</button>
+                    </div>
+
+                    <div class="cms-items-grid" id="cms-portfolio-list">
+                        <!-- Dynamic list items cards -->
+                    </div>
+                </div>
+
+                <!-- 4. TESTIMONIALS PANEL -->
+                <div class="dashboard-panel" id="panel-testimonials">
+                    <p class="panel-desc">Manage the client quotes shown inside the slider carousel, establishing corporate clients or high-end patron details.</p>
+                    
+                    <div class="list-header">
+                        <h3>Patron Reviews</h3>
+                        <button class="btn btn-gold btn-sm" id="btn-add-testimonial"><i class="fa-solid fa-plus"></i> Add Review</button>
+                    </div>
+
+                    <div class="cms-items-grid" id="cms-testimonials-list">
+                        <!-- Dynamic list items cards -->
+                    </div>
+                </div>
+
+                <!-- 5. GALLERY PANEL -->
+                <div class="dashboard-panel" id="panel-gallery">
+                    <p class="panel-desc">Update the horizontal scrolling marquee items. Add detail imagery and coordinate descriptions shown inside the zoom lightbox.</p>
+                    
+                    <div class="list-header">
+                        <h3>Marquee Items</h3>
+                        <button class="btn btn-gold btn-sm" id="btn-add-gallery"><i class="fa-solid fa-plus"></i> Add Marquee Image</button>
+                    </div>
+
+                    <div class="cms-items-grid" id="cms-gallery-list">
+                        <!-- Dynamic list items cards -->
+                    </div>
+                </div>
+
+                <!-- 6. CONTACT PANEL -->
+                <div class="dashboard-panel" id="panel-contact">
+                    <p class="panel-desc">Manage contact details, including phone lines, official emails, social media handles, and WhatsApp routing targets.</p>
+                    <form class="cms-form-grid">
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-address">Head Office Address</label>
+                            <input type="text" id="edit-contact-address" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-phone1">Concierge Phone 1 (e.g. 7205767376)</label>
+                            <input type="text" id="edit-contact-phone1" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-phone2">Concierge Phone 2 (e.g. 9337513044)</label>
+                            <input type="text" id="edit-contact-phone2" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-email">Registry Inquiries Email</label>
+                            <input type="email" id="edit-contact-email" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-instagram">Instagram Handle (Username only)</label>
+                            <input type="text" id="edit-contact-instagram" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-whatsapp">WhatsApp Line (Direct numeric link)</label>
+                            <input type="text" id="edit-contact-whatsapp" class="form-input" required style="width: 100%;">
+                        </div>
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-contact-web3forms-key">Web3Forms Access Key (Request from web3forms.com)</label>
+                            <input type="text" id="edit-contact-web3forms-key" class="form-input" placeholder="e.g. xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" style="width: 100%;">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- DYNAMIC EDITOR MODALS (CMS) -->
+    <!-- Service Modal -->
+    <div class="modal" id="modal-edit-service">
+        <div class="modal-content" style="max-width: 600px; text-align: left;">
+            <h3 class="modal-title" style="margin-bottom: 20px;" id="service-modal-title">Service Details</h3>
+            <form id="form-service-modal">
+                <input type="hidden" id="service-idx">
+                <div class="form-group">
+                    <label class="form-label" for="s-title">Service Title</label>
+                    <input type="text" id="s-title" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="s-icon">FontAwesome Icon Class (e.g. fa-solid fa-gem)</label>
+                    <input type="text" id="s-icon" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="s-desc">Short Description</label>
+                    <textarea id="s-desc" class="form-input textarea-input" rows="3" required style="width: 100%;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Key Features (One per line)</label>
+                    <textarea id="s-features" class="form-input textarea-input" rows="3" required placeholder="e.g. Venue sourcing&#10;Bespoke registry&#10;Full styling" style="width: 100%;"></textarea>
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Apply Changes</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal -->
+    <div class="modal" id="modal-edit-portfolio">
+        <div class="modal-content" style="max-width: 600px; text-align: left;">
+            <h3 class="modal-title" style="margin-bottom: 20px;" id="portfolio-modal-title">Portfolio Item</h3>
+            <form id="form-portfolio-modal">
+                <input type="hidden" id="portfolio-idx">
+                <div class="form-group">
+                    <label class="form-label" for="p-title">Project Title</label>
+                    <input type="text" id="p-title" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="p-category">Filters Categories (e.g. weddings, corporate, vip, decor)</label>
+                    <input type="text" id="p-category" class="form-input" required placeholder="Separate multiple with spaces" style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="p-details">Venue & Location</label>
+                    <input type="text" id="p-details" class="form-input" required placeholder="e.g. Ritz Carlton, NY" style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="p-src">Image Source URL</label>
+                    <input type="text" id="p-src" class="form-input" required placeholder="e.g. assets/wedding.png" style="width: 100%;">
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Apply Changes</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonial Modal -->
+    <div class="modal" id="modal-edit-testimonial">
+        <div class="modal-content" style="max-width: 600px; text-align: left;">
+            <h3 class="modal-title" style="margin-bottom: 20px;" id="testimonial-modal-title">Review Details</h3>
+            <form id="form-testimonial-modal">
+                <input type="hidden" id="testimonial-idx">
+                <div class="form-group">
+                    <label class="form-label" for="t-text">Patron Review Quote</label>
+                    <textarea id="t-text" class="form-input textarea-input" rows="4" required style="width: 100%;"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="t-author">Patron Name</label>
+                    <input type="text" id="t-author" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="t-title">Event Classification / Title</label>
+                    <input type="text" id="t-title" class="form-input" required placeholder="e.g. Normandy Wedding" style="width: 100%;">
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Apply Changes</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal" id="modal-edit-gallery">
+        <div class="modal-content" style="max-width: 600px; text-align: left;">
+            <h3 class="modal-title" style="margin-bottom: 20px;" id="gallery-modal-title">Marquee Details</h3>
+            <form id="form-gallery-modal">
+                <input type="hidden" id="gallery-idx">
+                <div class="form-group">
+                    <label class="form-label" for="g-title">Image Title</label>
+                    <input type="text" id="g-title" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="g-desc">Detail Description</label>
+                    <input type="text" id="g-desc" class="form-input" required style="width: 100%;">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="g-src">Image Source URL</label>
+                    <input type="text" id="g-src" class="form-input" required placeholder="e.g. assets/wedding.png" style="width: 100%;">
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Apply Changes</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- TOAST ALERT -->
+    <div class="cms-success-toast" id="cms-success-toast">
+        <i class="fa-solid fa-circle-check"></i>
+        <div>
+            <div class="toast-title">Registry Updates Published</div>
+            <div class="toast-desc">The database changes were successfully published to the template files.</div>
+        </div>
+    </div>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
