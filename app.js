@@ -152,13 +152,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Hydrate Template from localStorage CMS data
     function loadCMSDatabase(callback) {
-        const binUrl = `https://extendsclass.com/api/json-storage/bin/eaffcfa?t=${Date.now()}`;
+        const binUrl = `https://kvdb.io/3zBFyHw6CcRqRfAYAEzCgc/cms_data?t=${Date.now()}`;
         fetch(binUrl)
             .then(response => {
                 if (response.ok) {
                     return response.json();
                 }
-                throw new Error("ExtendsClass storage bin not found or failed");
+                throw new Error("KVdb storage bucket not found or failed");
             })
             .then(data => {
                 cmsData = data;
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 callback();
             })
             .catch(dbErr => {
-                console.warn("ExtendsClass DB load failed, trying local file fallback:", dbErr);
+                console.warn("KVdb DB load failed, trying local file fallback:", dbErr);
                 fetch(`cms-data.json?t=${Date.now()}`)
                     .then(response => {
                         if (response.ok) {
@@ -1571,8 +1571,8 @@ document.addEventListener("DOMContentLoaded", () => {
             globalSaveBtn.disabled = true;
             globalSaveBtn.innerHTML = `<span>Publishing... <i class="fa-solid fa-spinner fa-spin"></i></span>`;
 
-            // Publish globally to ExtendsClass API
-            const binUrl = "https://extendsclass.com/api/json-storage/bin/eaffcfa";
+            // Publish globally to KVdb.io API
+            const binUrl = "https://kvdb.io/3zBFyHw6CcRqRfAYAEzCgc/cms_data";
             fetch(binUrl, {
                 method: "PUT",
                 headers: {
@@ -1608,7 +1608,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error("Database save failed:", err);
                 globalSaveBtn.disabled = false;
                 globalSaveBtn.innerHTML = originalContent;
-                alert("Error publishing changes: " + err.message + "\nYour changes are saved locally but could not be sent to the server. Please check your internet connection.");
+                alert("Error publishing changes: " + err.message + "\n\nYour changes are saved locally in this browser, but could not be sent to the server.\n\nPlease check your internet connection and verify that you have clicked the verification link sent to imperialmoments2026@gmail.com.");
             });
         });
     }
