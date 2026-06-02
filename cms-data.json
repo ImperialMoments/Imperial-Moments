@@ -1,0 +1,131 @@
+{
+  "contact": {
+    "address": "750 Fifth Avenue, Suite 1200, New York, NY 10019",
+    "phone1": "7205767376",
+    "phone2": "9337513044",
+    "email": "Imperialmoments2026@gmail.com",
+    "instagram": "Imperial.moments_",
+    "whatsapp": "917205767376",
+    "web3formsKey": ""
+  },
+  "about": {
+    "subtitle": "THE LEGACY",
+    "title": "The Art of Royal Celebration",
+    "highlight": "At Imperial Moments, we believe that life's grandest milestones deserve to be staged with royal majesty, absolute precision, and timeless luxury.",
+    "paragraph1": "Born out of a passion for luxury hospitality and grand ballrooms, Imperial Moments is the premier event planning concierge for high-end weddings, prestigious corporate galas, and exclusive VIP private experiences. We curate bespoke events worldwide, transforming visions into breathtaking realities.",
+    "paragraph2": "Every centerpiece, every candlelight shimmer, and every performance is hand-curated. With an elite registry of vendors, global destination access, and dedicated styling consultants, we guarantee an affair that is prestigious, unforgettable, and entirely yours."
+  },
+  "services": [
+    {
+      "title": "Royal Wedding Planning",
+      "icon": "fa-solid fa-gem",
+      "text": "Bespoke wedding curations with regal grand setups, designer styling, and seamless coordinate flows.",
+      "features": ["Venue sourcing (Castles & Ballrooms)", "Bespoke bridal registry access", "Full design & styling management"]
+    },
+    {
+      "title": "Destination Weddings",
+      "icon": "fa-solid fa-plane-departure",
+      "text": "Exquisite coordination of overseas weddings in French Châteaux, Italian villas, or private islands.",
+      "features": ["Global travel & concierge services", "Bilingual on-ground management", "Multi-day celebratory itineraries"]
+    },
+    {
+      "title": "Corporate Events",
+      "icon": "fa-solid fa-handshake",
+      "text": "Prestigious galas, elite awards nights, executive conferences, and grand brand launching ceremonies.",
+      "features": ["Brand experience alignment", "State-of-the-art production tech", "High-profile VIP speaker liaison"]
+    },
+    {
+      "title": "Luxury Birthdays",
+      "icon": "fa-solid fa-cake-candles",
+      "text": "Milestone birthday affairs custom-tailored around ultra-luxurious, creative theatrical themes.",
+      "features": ["Custom stage design & performance", "Michellin-star menu design", "Immersive themed aesthetics"]
+    },
+    {
+      "title": "Engagement Ceremonies",
+      "icon": "fa-solid fa-ring",
+      "text": "Intimate yet grand gatherings to announce forever, set in highly dramatic and romantic spaces.",
+      "features": ["Romantic styling & design", "Custom proposal orchestrations", "Fine wine & gourmet pairing"]
+    },
+    {
+      "title": "VIP Private Events",
+      "icon": "fa-solid fa-champagne-glasses",
+      "text": "Highly exclusive events where absolute discretion and custom luxury are non-negotiable details.",
+      "features": ["NDA protected environments", "Private security details", "High-profile artist management"]
+    },
+    {
+      "title": "Event Décor & Styling",
+      "icon": "fa-solid fa-wand-magic-sparkles",
+      "text": "Bespoke lighting, floral installations, luxury drapery, table curation, and floral arches.",
+      "features": ["High-end floral design registry", "Custom atmospheric lighting", "Luxury rentals (Cutlery & Chairs)"]
+    },
+    {
+      "title": "Entertainment & Artists",
+      "icon": "fa-solid fa-masks-theater",
+      "text": "Curating elite violinists, opera stars, international DJs, and acrobats for magnificent displays.",
+      "features": ["Global contract & rider handling", "Custom musical compositions", "Sound engineering oversight"]
+    }
+  ],
+  "portfolio": [
+    {
+      "title": "The Versailles Romance",
+      "category": "weddings",
+      "details": "Castle Ballroom, France",
+      "src": "assets/wedding.png"
+    },
+    {
+      "title": "Aegis Annual Summit",
+      "category": "corporate",
+      "details": "Plaza Ballroom, NY",
+      "src": "assets/corporate.png"
+    },
+    {
+      "title": "The Sapphire Lounge",
+      "category": "vip",
+      "details": "Private Island Estate",
+      "src": "assets/vip_party.png"
+    },
+    {
+      "title": "Crest & Crimson Tablescape",
+      "category": "decor weddings",
+      "details": "Ritz Carlton, Vienna",
+      "src": "assets/about_1.png"
+    },
+    {
+      "title": "Orchid Cascade Stand",
+      "category": "decor",
+      "details": "Aria Ballrooms, Milan",
+      "src": "assets/about_2.png"
+    },
+    {
+      "title": "The Chandelier Grand Ballroom",
+      "category": "weddings vip",
+      "details": "Hofburg Palace, Austria",
+      "src": "assets/hero_bg.png"
+    }
+  ],
+  "testimonials": [
+    {
+      "text": "\"Imperial Moments orchestrated our destination wedding in Normandy. It was nothing short of a fairy tale. The gold styling, the chandelier layout, and their concierge's support for our guests was simply immaculate. Pure royal class!\"",
+      "author": "Lady Eleanor & Lord George",
+      "title": "Normandy Chateau Wedding"
+    },
+    {
+      "text": "\"The annual corporate anniversary awards dinner we hosted needed to breathe prestige. Victoria Sterling and her event squad styled the hall in high-end charcoal and metallic gold drapes. The sound system and security were flawlessly coordinated. A spectacular success.\"",
+      "author": "Jonathan Hayes",
+      "title": "CEO, Vanguard Global Capital"
+    },
+    {
+      "text": "\"For my wife's 50th birthday gala, Imperial Moments designed a private island garden masquerade. The sheer attention to detailed floral installations and the violinists they brought from Salzburg left our guests spellbound. Truly master designers.\"",
+      "author": "Maximilian Vane",
+      "title": "Private Island Estate Gala"
+    }
+  ],
+  "gallery": [
+    { "src": "assets/wedding.png", "title": "Luxury Arch Details", "desc": "Golden floral arch at sunset ceremony." },
+    { "src": "assets/about_1.png", "title": "Tablescape Detail", "desc": "Luxury gold plate setting with crimson velvet napkins." },
+    { "src": "assets/corporate.png", "title": "Stage Lighting Curation", "desc": "Exquisite stage lighting for award events." },
+    { "src": "assets/vip_party.png", "title": "Champagne Tower", "desc": "Exquisite lounge birthday arrangements." },
+    { "src": "assets/about_2.png", "title": "Floral Curation", "desc": "Design coordinators positioning orchid displays." },
+    { "src": "assets/hero_bg.png", "title": "Chandelier Grandeur", "desc": "Massive crystals and candlelight setup." }
+  ]
+}

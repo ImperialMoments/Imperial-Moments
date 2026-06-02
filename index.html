@@ -1056,6 +1056,25 @@
         </div>
     </div>
 
+    <!-- GITHUB PUBLISH STATUS MODAL -->
+    <div class="modal" id="modal-github-publish">
+        <div class="modal-content text-center" style="max-width: 480px; padding: 40px; background: rgba(15, 15, 15, 0.95); border: 1px solid rgba(212, 175, 55, 0.2);">
+            <i class="fa-brands fa-github" id="pub-icon" style="font-size: 3.5rem; color: var(--gold); margin-bottom: 25px; display: inline-block;"></i>
+            <h3 class="modal-title" id="pub-title" style="font-family: 'Cinzel Decorative', serif; font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; color: var(--cream);">Global Publish</h3>
+            <p class="modal-text" id="pub-status" style="margin-bottom: 30px; font-size: 0.9rem; color: var(--cream-dark); font-weight: 300; line-height: 1.6;">Ready to push changes to GitHub.</p>
+            
+            <div class="preloader-bar-container" id="pub-progress-container" style="display: none; height: 4px; background: rgba(255,255,255,0.05); margin-bottom: 30px; border-radius: 2px; overflow: hidden;">
+                <div class="preloader-bar" id="pub-progress-bar" style="width: 0%; height: 100%; background: var(--gold-gradient); transition: width 0.3s ease;"></div>
+            </div>
+
+            <div style="display: flex; gap: 15px; justify-content: center;">
+                <button type="button" class="btn btn-red-outline" id="btn-cancel-publish" style="width: 100%;"><span>Cancel</span></button>
+                <button type="button" class="btn btn-gold" id="btn-confirm-publish" style="width: 100%;"><span>Start Push</span></button>
+                <button type="button" class="btn btn-gold" id="btn-close-publish" style="display: none; width: 100%;"><span>Close</span></button>
+            </div>
+        </div>
+    </div>
+
     <!-- INTEGRATED DASHBOARD FULL-SCREEN OVERLAY -->
     <div class="dashboard-container" id="dashboard-container" style="display: none;">
         
@@ -1074,6 +1093,7 @@
                 <button class="menu-item" data-target="panel-testimonials"><i class="fa-solid fa-quote-left"></i> Testimonials</button>
                 <button class="menu-item" data-target="panel-gallery"><i class="fa-solid fa-camera-retro"></i> Gallery Marquee</button>
                 <button class="menu-item" data-target="panel-contact"><i class="fa-solid fa-envelope"></i> Contact Info</button>
+                <button class="menu-item" data-target="panel-github"><i class="fa-brands fa-github"></i> Global Publish</button>
             </nav>
             
             <div class="sidebar-footer">
@@ -1086,9 +1106,10 @@
         <main class="content-wrapper">
             <header class="content-header">
                 <h1 class="content-title" id="panel-title-text">About Us Editor</h1>
-                <div class="header-actions">
-                    <span style="font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em;"><i class="fa-solid fa-user-shield"></i> Active Admin Registry</span>
-                    <button class="btn btn-gold btn-sm" id="global-save-btn"><i class="fa-solid fa-cloud-arrow-up"></i> Publish Changes</button>
+                <div class="header-actions" style="display: flex; gap: 8px; align-items: center;">
+                    <span style="font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-right: 10px;"><i class="fa-solid fa-user-shield"></i> Active Admin Registry</span>
+                    <button class="btn btn-gold btn-sm" id="global-save-btn" style="padding: 10px 18px;"><i class="fa-solid fa-cloud-arrow-up"></i> Save Locally</button>
+                    <button class="btn btn-gold btn-sm" id="github-publish-btn" style="background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%); border-color: var(--gold); padding: 10px 18px;"><i class="fa-brands fa-github"></i> Publish Globally</button>
                 </div>
             </header>
 
@@ -1208,6 +1229,25 @@
                         <div class="form-group cms-full-width" style="text-align: left;">
                             <label class="form-label" for="edit-contact-web3forms-key">Web3Forms Access Key (Request from web3forms.com)</label>
                             <input type="text" id="edit-contact-web3forms-key" class="form-input" placeholder="e.g. xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" style="width: 100%;">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 7. GITHUB SYNC PANEL -->
+                <div class="dashboard-panel" id="panel-github">
+                    <p class="panel-desc" style="margin-bottom: 25px;">Configure your GitHub connection to publish updates globally. This allows changes made in this dashboard to immediately reflect on all devices worldwide.</p>
+                    <form class="cms-form-grid" onsubmit="event.preventDefault();">
+                        <div class="form-group cms-full-width" style="text-align: left;">
+                            <label class="form-label" for="edit-github-token">GitHub Personal Access Token (PAT)</label>
+                            <input type="password" id="edit-github-token" class="form-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" style="width: 100%;">
+                            <span class="info-value" style="font-size: 0.75rem; margin-top: 8px; color: var(--gold-light); display: block; line-height: 1.5;">
+                                You need a GitHub Classic Token with <b>repo</b> scope. <a href="https://github.com/settings/tokens/new?scopes=repo&description=Imperial%20Moments%20CMS" target="_blank" rel="noopener" style="color: var(--cream); text-decoration: underline; font-weight: 500;">Generate Token here</a>
+                            </span>
+                        </div>
+                        <div class="form-group cms-full-width" style="text-align: left; margin-top: 15px;">
+                            <button type="button" class="btn btn-gold" id="btn-save-token" style="width: auto;">
+                                <span>Save Token Locally</span>
+                            </button>
                         </div>
                     </form>
                 </div>

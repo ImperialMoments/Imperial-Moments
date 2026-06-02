@@ -151,13 +151,41 @@ document.addEventListener("DOMContentLoaded", () => {
     let activeLightboxIndex = 0;
 
     // 3. Hydrate Template from localStorage CMS data
+    function loadCMSDatabase(callback) {
+        fetch(`cms-data.json?t=${Date.now()}`)
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                }
+                throw new Error("Server database not found");
+            })
+            .then(data => {
+                cmsData = data;
+                localStorage.setItem("imperial_moments_data", JSON.stringify(cmsData));
+                callback();
+            })
+            .catch(err => {
+                console.warn("Using local cache / default template:", err);
+                const localData = localStorage.getItem("imperial_moments_data");
+                if (!localData) {
+                    cmsData = JSON.parse(JSON.stringify(defaultCMSData));
+                    localStorage.setItem("imperial_moments_data", JSON.stringify(cmsData));
+                } else {
+                    cmsData = JSON.parse(localData);
+                }
+                callback();
+            });
+    }
+
     function hydrateWebsite() {
-        const localData = localStorage.getItem("imperial_moments_data");
-        if (!localData) {
-            cmsData = JSON.parse(JSON.stringify(defaultCMSData));
-            localStorage.setItem("imperial_moments_data", JSON.stringify(cmsData));
-        } else {
-            cmsData = JSON.parse(localData);
+        if (!cmsData || Object.keys(cmsData).length === 0) {
+            const localData = localStorage.getItem("imperial_moments_data");
+            if (!localData) {
+                cmsData = JSON.parse(JSON.stringify(defaultCMSData));
+                localStorage.setItem("imperial_moments_data", JSON.stringify(cmsData));
+            } else {
+                cmsData = JSON.parse(localData);
+            }
         }
 
         // Hydrate About Us Section
@@ -336,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Run hydration instantly
-    hydrateWebsite();
+    loadCMSDatabase(hydrateWebsite);
 
     // 4. Custom Cursor Follower Logic
     if (window.innerWidth > 992) {
@@ -1534,5 +1562,171 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.getElementById("current-year").textContent = new Date().getFullYear();
+
+    // 9. GitHub Sync & Global Publish Controller
+    const githubPublishBtn = document.getElementById("github-publish-btn");
+    const modalGithubPublish = document.getElementById("modal-github-publish");
+    const btnCancelPublish = document.getElementById("btn-cancel-publish");
+    const btnConfirmPublish = document.getElementById("btn-confirm-publish");
+    const btnClosePublish = document.getElementById("btn-close-publish");
+    const pubStatus = document.getElementById("pub-status");
+    const pubTitle = document.getElementById("pub-title");
+    const pubIcon = document.getElementById("pub-icon");
+    const pubProgressContainer = document.getElementById("pub-progress-container");
+    const pubProgressBar = document.getElementById("pub-progress-bar");
+
+    const githubTokenInput = document.getElementById("edit-github-token");
+    const btnSaveToken = document.getElementById("btn-save-token");
+
+    // Load saved GitHub token on opening registry
+    const savedToken = localStorage.getItem("imperial_moments_github_token") || "";
+    if (githubTokenInput) {
+        githubTokenInput.value = savedToken;
+    }
+
+    if (btnSaveToken) {
+        btnSaveToken.addEventListener("click", () => {
+            const tokenVal = githubTokenInput.value.trim();
+            localStorage.setItem("imperial_moments_github_token", tokenVal);
+            alert("Success: GitHub Access Token saved locally on this browser.");
+        });
+    }
+
+    if (githubPublishBtn) {
+        githubPublishBtn.addEventListener("click", () => {
+            // Populate token input just in case
+            if (githubTokenInput) {
+                githubTokenInput.value = localStorage.getItem("imperial_moments_github_token") || "";
+            }
+            
+            // Set initial state of modal
+            pubTitle.textContent = "Global Publish";
+            pubIcon.className = "fa-brands fa-github";
+            pubIcon.style.color = "var(--gold)";
+            pubStatus.textContent = "Ready to push changes to GitHub. This will update the website globally for all users.";
+            pubProgressContainer.style.display = "none";
+            pubProgressBar.style.width = "0%";
+            
+            btnCancelPublish.style.display = "inline-block";
+            btnConfirmPublish.style.display = "inline-block";
+            btnClosePublish.style.display = "none";
+
+            modalGithubPublish.classList.add("open");
+        });
+    }
+
+    if (btnCancelPublish) {
+        btnCancelPublish.addEventListener("click", () => {
+            modalGithubPublish.classList.remove("open");
+        });
+    }
+
+    if (btnClosePublish) {
+        btnClosePublish.addEventListener("click", () => {
+            modalGithubPublish.classList.remove("open");
+        });
+    }
+
+    if (btnConfirmPublish) {
+        btnConfirmPublish.addEventListener("click", () => {
+            const token = (localStorage.getItem("imperial_moments_github_token") || "").trim();
+            if (!token) {
+                pubStatus.textContent = "Error: GitHub Personal Access Token is missing. Please enter and save your token in the 'Global Publish' panel first.";
+                pubIcon.style.color = "var(--velvet-red-light)";
+                return;
+            }
+
+            // Update UI to running state
+            btnCancelPublish.style.display = "none";
+            btnConfirmPublish.style.display = "none";
+            pubProgressContainer.style.display = "block";
+            pubProgressBar.style.width = "10%";
+            pubStatus.textContent = "Connecting to GitHub repository...";
+
+            const owner = "ImperialMoments";
+            const repo = "Imperial-Moments";
+            const path = "cms-data.json";
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}`;
+
+            let currentSha = null;
+
+            // Step 1: Fetch current file SHA
+            fetch(url, {
+                method: "GET",
+                headers: {
+                    "Authorization": `Bearer ${token}`,
+                    "Accept": "application/vnd.github+json",
+                    "X-GitHub-Api-Version": "2022-11-28"
+                }
+            })
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json();
+                } else if (res.status === 404) {
+                    return null; // File doesn't exist yet
+                } else {
+                    throw new Error(`Authentication failed or repository not found (Status: ${res.status})`);
+                }
+            })
+            .then(fileInfo => {
+                pubProgressBar.style.width = "40%";
+                pubStatus.textContent = "Preparing configuration updates...";
+
+                if (fileInfo) {
+                    currentSha = fileInfo.sha;
+                }
+
+                // Step 2: Push changes
+                const updatedContent = btoa(unescape(encodeURIComponent(JSON.stringify(cmsData, null, 2))));
+                const bodyPayload = {
+                    message: "Update CMS website contents globally via Admin Panel",
+                    content: updatedContent
+                };
+                if (currentSha) {
+                    bodyPayload.sha = currentSha;
+                }
+
+                pubProgressBar.style.width = "60%";
+                pubStatus.textContent = "Committing changes to GitHub main branch...";
+
+                return fetch(url, {
+                    method: "PUT",
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Accept": "application/vnd.github+json",
+                        "X-GitHub-Api-Version": "2022-11-28",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(bodyPayload)
+                });
+            })
+            .then(res => {
+                if (res.ok) {
+                    return res.json();
+                } else {
+                    return res.json().then(errData => {
+                        throw new Error(errData.message || "Failed to push files to repository.");
+                    });
+                }
+            })
+            .then(pushResult => {
+                pubProgressBar.style.width = "100%";
+                pubStatus.innerHTML = `<strong>Global Publish Successful!</strong><br><br>Your changes have been committed. GitHub Pages is rebuilding the live website in the background.<br><br>The updates will be live for everyone on all devices in 1-2 minutes.`;
+                pubIcon.className = "fa-solid fa-cloud-arrow-up";
+                pubIcon.style.color = "var(--gold)";
+                
+                btnClosePublish.style.display = "inline-block";
+            })
+            .catch(err => {
+                console.error(err);
+                pubProgressContainer.style.display = "none";
+                pubStatus.innerHTML = `<span style="color: var(--velvet-red-light)"><strong>Publish Failed:</strong></span><br>${err.message || err}`;
+                pubIcon.className = "fa-solid fa-circle-exclamation";
+                pubIcon.style.color = "var(--velvet-red-light)";
+                
+                btnCancelPublish.style.display = "inline-block";
+            });
+        });
+    }
 });
 
