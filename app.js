@@ -292,11 +292,10 @@ document.addEventListener("DOMContentLoaded", () => {
                             <p class="author-title">${t.title}</p>
                         </div>
                         <div class="author-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                            ${Array.from({ length: 5 }, (_, i) => {
+                                const starClass = i < (t.rating || 5) ? 'fa-solid fa-star' : 'fa-regular fa-star';
+                                return `<i class="${starClass}"></i>`;
+                            }).join("")}
                         </div>
                     </div>
                 `;
@@ -980,6 +979,130 @@ document.addEventListener("DOMContentLoaded", () => {
         form.reset();
     });
 
+    // 14.b Client Add Review Feature
+    const clientAddReviewBtn = document.getElementById("btn-client-add-testimonial");
+    const clientReviewModal = document.getElementById("modal-client-add-testimonial");
+    const clientReviewForm = document.getElementById("form-client-testimonial-modal");
+    const clientStarRatingContainer = document.getElementById("client-star-rating");
+    const clientStars = clientStarRatingContainer ? clientStarRatingContainer.querySelectorAll(".star-item") : [];
+    const clientRatingValInput = document.getElementById("ct-rating-val");
+
+    if (clientAddReviewBtn && clientReviewModal) {
+        clientAddReviewBtn.addEventListener("click", () => {
+            // Reset form
+            if (clientReviewForm) clientReviewForm.reset();
+            // Reset stars to 5 by default
+            setClientStarsRating(5);
+            if (clientRatingValInput) clientRatingValInput.value = "5";
+            clientReviewModal.classList.add("open");
+        });
+    }
+
+    function setClientStarsRating(rating) {
+        clientStars.forEach((star, idx) => {
+            const icon = star.querySelector("i");
+            if (idx < rating) {
+                icon.className = "fa-solid fa-star";
+                star.classList.add("active");
+            } else {
+                icon.className = "fa-regular fa-star";
+                star.classList.remove("active");
+            }
+        });
+    }
+
+    clientStars.forEach((star, idx) => {
+        const starVal = idx + 1;
+        // Hover inside a star
+        star.addEventListener("mouseenter", () => {
+            setClientStarsRating(starVal);
+        });
+        
+        // Click on a star
+        star.addEventListener("click", () => {
+            if (clientRatingValInput) clientRatingValInput.value = starVal;
+            setClientStarsRating(starVal);
+        });
+    });
+
+    if (clientStarRatingContainer) {
+        clientStarRatingContainer.addEventListener("mouseleave", () => {
+            const currentRating = parseInt(clientRatingValInput.value || 5, 10);
+            setClientStarsRating(currentRating);
+        });
+    }
+
+    if (clientReviewForm) {
+        clientReviewForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const author = document.getElementById("ct-author").value.trim();
+            const title = document.getElementById("ct-title").value.trim();
+            const rating = parseInt(clientRatingValInput.value || 5, 10);
+            const rawText = document.getElementById("ct-text").value.trim();
+            
+            // Format quotes nicely
+            const text = `"${rawText.replace(/^["']|["']$/g, '')}"`;
+
+            const newReviewObj = { text, author, title, rating };
+
+            // Add to database
+            cmsData.testimonials = cmsData.testimonials || [];
+            cmsData.testimonials.push(newReviewObj);
+
+            // Save to localStorage
+            localStorage.setItem("imperial_moments_data", JSON.stringify(cmsData));
+
+            // Re-hydrate UI so it renders in slider instantly
+            hydrateWebsite();
+
+            // Close modal
+            clientReviewModal.classList.remove("open");
+
+            // Scroll slider to display the new review (at the end)
+            setTimeout(() => {
+                const slidesCount = document.querySelectorAll(".testimonial-slide").length;
+                currentSlideIndex = slidesCount - 1;
+                updateSliderPosition();
+
+                // Show success toast notification
+                const toast = document.getElementById("cms-success-toast");
+                if (toast) {
+                    const toastTitle = toast.querySelector(".toast-title");
+                    const toastDesc = toast.querySelector(".toast-desc");
+                    if (toastTitle) toastTitle.textContent = "Review Submitted Successfully";
+                    if (toastDesc) toastDesc.textContent = "Your elegant review has been added to our patrons registry.";
+                    toast.classList.add("show");
+                    setTimeout(() => {
+                        toast.classList.remove("show");
+                        // Restore default toast labels in case someone uses admin save
+                        if (toastTitle) toastTitle.textContent = "Registry Updates Published";
+                        if (toastDesc) toastDesc.textContent = "The database changes were successfully published to the template files.";
+                    }, 4000);
+                }
+            }, 300);
+
+            // Synchronize with KVdb.io asynchronously
+            const binUrl = "https://kvdb.io/3zBFyHw6CcRqRfAYAEzCgc/cms_data";
+            fetch(binUrl, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(cmsData)
+            })
+            .then(response => {
+                if (response.ok) {
+                    console.log("Review successfully synced live to the global registry.");
+                } else {
+                    console.warn("Failed to sync review with remote KVdb database (Status: " + response.status + ")");
+                }
+            })
+            .catch(err => {
+                console.warn("KVdb synchronization network error: ", err);
+            });
+        });
+    }
+
     /* ==========================================================================
        CMS REGISTRY ADMIN CONTROLLER LOGIC
        ========================================================================== */
@@ -1437,6 +1560,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("t-text").value = "";
             document.getElementById("t-author").value = "";
             document.getElementById("t-title").value = "";
+            document.getElementById("t-rating").value = "5";
             document.getElementById("testimonial-modal-title").textContent = "Add New Review";
             document.getElementById("modal-edit-testimonial").classList.add("open");
         });
@@ -1451,6 +1575,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById("t-text").value = t.text;
             document.getElementById("t-author").value = t.author;
             document.getElementById("t-title").value = t.title;
+            document.getElementById("t-rating").value = t.rating || "5";
             document.getElementById("testimonial-modal-title").textContent = "Edit Review Details";
             document.getElementById("modal-edit-testimonial").classList.add("open");
         }
@@ -1470,8 +1595,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const text = document.getElementById("t-text").value.trim();
             const author = document.getElementById("t-author").value.trim();
             const title = document.getElementById("t-title").value.trim();
+            const rating = parseInt(document.getElementById("t-rating").value, 10);
 
-            const updatedObj = { text, author, title };
+            const updatedObj = { text, author, title, rating };
 
             if (idxVal === "") {
                 cmsData.testimonials.push(updatedObj);

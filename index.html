@@ -620,6 +620,12 @@
                     <span class="dot" data-index="2"></span>
                 </div>
 
+                <div class="text-center testimonial-actions anim-fade-in-up" style="margin-top: 40px;">
+                    <button class="btn btn-gold btn-shine" id="btn-client-add-testimonial">
+                        <span>Share Your Experience</span>
+                    </button>
+                </div>
+
             </div>
         </section>
 
@@ -1294,13 +1300,59 @@
                     <label class="form-label" for="t-author">Patron Name</label>
                     <input type="text" id="t-author" class="form-input" required style="width: 100%;">
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom: 20px;">
                     <label class="form-label" for="t-title">Event Classification / Title</label>
                     <input type="text" id="t-title" class="form-input" required placeholder="e.g. Normandy Wedding" style="width: 100%;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label" for="t-rating">Rating (Stars)</label>
+                    <select id="t-rating" class="form-input form-select" style="width: 100%; height: auto;">
+                        <option value="5">5 Stars (Excellent)</option>
+                        <option value="4">4 Stars (Very Good)</option>
+                        <option value="3">3 Stars (Good)</option>
+                        <option value="2">2 Stars (Fair)</option>
+                        <option value="1">1 Star (Poor)</option>
+                    </select>
                 </div>
                 <div style="display: flex; gap: 15px; margin-top: 25px;">
                     <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
                     <button type="submit" class="btn btn-gold btn-full" style="width: 100%;"><span>Apply Changes</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Client Add Review Modal -->
+    <div class="modal" id="modal-client-add-testimonial">
+        <div class="modal-content" style="max-width: 600px; text-align: left;">
+            <h3 class="modal-title" style="margin-bottom: 20px;">Share Your Experience</h3>
+            <form id="form-client-testimonial-modal">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label" for="ct-author">Your Name</label>
+                    <input type="text" id="ct-author" class="form-input" required placeholder="e.g. Lady Isabella & Sir Henry" style="width: 100%;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label" for="ct-title">Event Classification / Title</label>
+                    <input type="text" id="ct-title" class="form-input" required placeholder="e.g. Royal Chateau Wedding, Versailles" style="width: 100%;">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label">Rating</label>
+                    <div class="star-rating" id="client-star-rating" style="display: flex; gap: 10px; font-size: 1.8rem; margin: 10px 0;">
+                        <span class="star-item" data-rating="1"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-item" data-rating="2"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-item" data-rating="3"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-item" data-rating="4"><i class="fa-solid fa-star"></i></span>
+                        <span class="star-item" data-rating="5"><i class="fa-solid fa-star"></i></span>
+                    </div>
+                    <input type="hidden" id="ct-rating-val" value="5">
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label class="form-label" for="ct-text">Your Review Quote</label>
+                    <textarea id="ct-text" class="form-input textarea-input" rows="4" required placeholder="Describe your experience with Imperial Moments..." style="width: 100%;"></textarea>
+                </div>
+                <div style="display: flex; gap: 15px; margin-top: 25px;">
+                    <button type="button" class="btn btn-red-outline btn-full close-modal-btn" style="width: 100%;"><span>Cancel</span></button>
+                    <button type="submit" class="btn btn-gold btn-full btn-shine" style="width: 100%;"><span>Submit Review</span></button>
                 </div>
             </form>
         </div>

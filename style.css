@@ -2769,3 +2769,26 @@ button {
     }
 }
 
+/* 6. CLIENT INTERACTIVE STAR RATING STYLES */
+.star-rating {
+    display: flex;
+    gap: 8px;
+}
+
+.star-rating .star-item {
+    font-size: 1.8rem;
+    color: rgba(212, 175, 55, 0.3); /* default dimmed gold star */
+    cursor: pointer;
+    transition: transform 0.20s ease, color 0.20s ease;
+}
+
+.star-rating .star-item:hover {
+    transform: scale(1.25);
+}
+
+.star-rating .star-item.active {
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+
