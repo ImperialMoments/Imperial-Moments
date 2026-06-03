@@ -1582,7 +1582,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .then(response => {
                 if (response.ok) {
-                    return response.json();
+                    return response.text();
                 }
                 throw new Error("Cloud update failed (Status: " + response.status + ")");
             })
