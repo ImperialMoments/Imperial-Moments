@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Host domain configuration
+Host: https://imperialmoments.github.io/Imperial-Moments/
+
+# Link to sitemap
+Sitemap: https://imperialmoments.github.io/Imperial-Moments/sitemap.xml
